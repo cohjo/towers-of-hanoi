@@ -52,7 +52,7 @@ firstBox.addEventListener('click', function(e) {
     }
 
     check();
-})
+});
 
 secondBox.addEventListener('click', function(e) {
     e.preventDefault();
@@ -70,7 +70,7 @@ secondBox.addEventListener('click', function(e) {
     }
 
     check();
-})
+});
 
 thirdBox.addEventListener('click', function(e) {
     e.preventDefault();
@@ -88,11 +88,12 @@ thirdBox.addEventListener('click', function(e) {
     }
 
     check();
-})
+});
 
 function check() {
 
     if(discsC.length === 4) {
         alert("You Won in "+ moves +" moves!");
     }
+
 }

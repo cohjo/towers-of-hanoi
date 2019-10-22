@@ -45,7 +45,7 @@ body {
 }
 
 #title {
-    width: 40%;
+    width: 30%;
     height: 60%;
 }
 
@@ -61,20 +61,20 @@ body {
 
 #disc1 {
     width: 100%;
-    height: 10%;
+    height: 15%;
 }
 
 #disc2 {
     width: 85%;
-    height: 10%;
+    height: 15%;
 }
 
 #disc3 {
     width: 70%;
-    height: 10%;
+    height: 15%;
 }
 
 #disc4 {
     width: 55%;
-    height: 10%;
+    height: 15%;
 }
