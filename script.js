@@ -6,7 +6,35 @@ var discsA = firstBox.children;
 var discsB = secondBox.children;
 var discsC = thirdBox.children;
 
+const firstD = document.querySelector('#disc1');
+const secondD = document.querySelector('#disc2');
+const thirdD = document.querySelector('#disc3');
+const fourD = document.querySelector('#disc4');
+
+var allDiscs = {
+    one: {
+        image: firstD,
+        score: 0
+    },
+
+    two: {
+        image: secondD,
+        score: 1
+    },
+
+    three: {
+        image: thirdD,
+        score: 2
+    },
+
+    four: {
+        image: fourD,
+        score: 3
+    }
+}
+
 var selected = [];
+var moves = 0;
 
 firstBox.addEventListener('click', function(e) {
     e.preventDefault();
@@ -18,8 +46,12 @@ firstBox.addEventListener('click', function(e) {
         } else {
             firstBox.insertBefore(selected[0], discsA[0]);
             selected.shift();
+
+            moves += 1;
         }
     }
+
+    check();
 })
 
 secondBox.addEventListener('click', function(e) {
@@ -32,8 +64,12 @@ secondBox.addEventListener('click', function(e) {
         } else {
             secondBox.insertBefore(selected[0], discsB[0]);
             selected.shift();
+
+            moves += 1;
         }
     }
+
+    check();
 })
 
 thirdBox.addEventListener('click', function(e) {
@@ -46,6 +82,17 @@ thirdBox.addEventListener('click', function(e) {
         } else {
             thirdBox.insertBefore(selected[0], discsC[0]);
             selected.shift();
+
+            moves += 1;
         }
     }
+
+    check();
 })
+
+function check() {
+
+    if(discsC.length === 4) {
+        alert("You Win!");
+    }
+}
