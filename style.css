@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    border: solid red;
 }
 
 body {
@@ -8,7 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: 20px;
 }
 
 .game {
@@ -22,7 +21,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    height: 200px;
+    height: 300px;
 }
 
 .gamebox {
@@ -30,7 +29,7 @@ body {
     flex-direction: row;
     justify-content: stretch;
     align-items: center;
-    height: 600px;
+    height: 500px;
     width: 100%;
 }
 
@@ -45,14 +44,23 @@ body {
     background-repeat: no-repeat;
 }
 
-img {
-    width: 100%;
-    height: 80%;
+#title {
+    width: 45%;
+    height: 60%;
 }
 
 .discs {
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
     height: 80%;
     border: solid blue;
     position: relative;
+}
+
+#disc {
+    width: 100%;
+    height: 20%;
 }
