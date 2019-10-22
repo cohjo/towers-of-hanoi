@@ -7,7 +7,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px;
 }
 
 .game {
@@ -22,6 +21,7 @@ body {
     justify-content: space-around;
     width: 100%;
     height: 300px;
+    padding-top: 20px;
 }
 
 .gamebox {
@@ -45,7 +45,7 @@ body {
 }
 
 #title {
-    width: 45%;
+    width: 40%;
     height: 60%;
 }
 
@@ -55,12 +55,27 @@ body {
     align-items: center;
     justify-content: flex-end;
     width: 80%;
-    height: 80%;
-    border: solid blue;
+    height: 83%;
     position: relative;
+    border: solid grey 1px;
 }
 
-#disc {
+#disc1 {
     width: 100%;
-    height: 20%;
+    height: 10%;
+}
+
+#disc2 {
+    width: 85%;
+    height: 10%;
+}
+
+#disc3 {
+    width: 70%;
+    height: 10%;
+}
+
+#disc4 {
+    width: 55%;
+    height: 10%;
 }
