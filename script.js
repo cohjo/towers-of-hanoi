@@ -93,6 +93,6 @@ thirdBox.addEventListener('click', function(e) {
 function check() {
 
     if(discsC.length === 4) {
-        alert("You Win!");
+        alert("You Won in "+ moves +" moves!");
     }
 }
