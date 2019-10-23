@@ -11,27 +11,10 @@ const secondD = document.querySelector('#disc2');
 const thirdD = document.querySelector('#disc3');
 const fourD = document.querySelector('#disc4');
 
-var allDiscs = {
-    one: {
-        image: firstD,
-        score: 0
-    },
-
-    two: {
-        image: secondD,
-        score: 1
-    },
-
-    three: {
-        image: thirdD,
-        score: 2
-    },
-
-    four: {
-        image: fourD,
-        score: 3
-    }
-}
+const score1 = document.getElementById('disc1').getAttribute('score');
+const score2 = document.getElementById('disc2').getAttribute('score');
+const score3 = document.getElementById('disc3').getAttribute('score');
+const score4 = document.getElementById('disc4').getAttribute('score');
 
 var selected = [];
 var moves = 0;
@@ -44,10 +27,17 @@ firstBox.addEventListener('click', function(e) {
             selected.push(discsA[0]);
             firstBox.removeChild(discsA[0]);
         } else {
-            firstBox.insertBefore(selected[0], discsA[0]);
-            selected.shift();
+            if (discsA.length === 0) {
+                firstBox.insertBefore(selected[0], discsA[0]);
+                selected.shift();
 
-            moves += 1;
+                moves += 1;
+            } else if (discsA[0].getAttribute('score') < selected[0].getAttribute('score')) {
+                firstBox.insertBefore(selected[0], discsA[0]);
+                selected.shift();
+
+                moves += 1;
+            }
         }
     }
 
@@ -62,10 +52,17 @@ secondBox.addEventListener('click', function(e) {
             selected.push(discsB[0]);
             secondBox.removeChild(discsB[0]);
         } else {
-            secondBox.insertBefore(selected[0], discsB[0]);
-            selected.shift();
+            if (discsB.length === 0) {
+                secondBox.insertBefore(selected[0], discsB[0]);
+                selected.shift();
 
-            moves += 1;
+                moves += 1;
+            } else if (discsB[0].getAttribute('score') < selected[0].getAttribute('score')) {
+                secondBox.insertBefore(selected[0], discsB[0]);
+                selected.shift();
+
+                moves += 1;
+            }
         }
     }
 
@@ -80,10 +77,17 @@ thirdBox.addEventListener('click', function(e) {
             selected.push(discsC[0]);
             thirdBox.removeChild(discsC[0]);
         } else {
-            thirdBox.insertBefore(selected[0], discsC[0]);
-            selected.shift();
+            if (discsC.length === 0) {
+                thirdBox.insertBefore(selected[0], discsC[0]);
+                selected.shift();
 
-            moves += 1;
+                moves += 1;
+            } else if (discsC[0].getAttribute('score') < selected[0].getAttribute('score')) {
+                thirdBox.insertBefore(selected[0], discsC[0]);
+                selected.shift();
+
+                moves += 1;
+            }
         }
     }
 
