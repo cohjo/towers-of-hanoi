@@ -105,7 +105,8 @@ thirdBox.addEventListener('click', function(e) {
 function check() {
 
     if(discsC.length === 4) {
-        alert("You Won in "+ moves +" moves!");
+        swal({title: "Good job!",
+            text: "You won in "+moves+" !",
+            icon: "success"});
     }
-
 }
