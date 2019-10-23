@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
-    border: solid grey 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: lighter;
+    /* border: solid grey 1px; */
 }
 
 body {

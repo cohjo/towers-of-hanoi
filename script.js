@@ -19,7 +19,7 @@ const score4 = document.getElementById('disc4').getAttribute('score');
 var selected = [];
 var moves = 0;
 
-var tracker = document.getElementById('cScore').innerText;
+var tracker = document.getElementById('cScore');
 
 firstBox.addEventListener('click', function(e) {
     e.preventDefault();
@@ -34,13 +34,13 @@ firstBox.addEventListener('click', function(e) {
                 selected.shift();
 
                 moves += 1;
-                tracker = moves;
+                tracker.textContent = moves;
             } else if (discsA[0].getAttribute('score') < selected[0].getAttribute('score')) {
                 firstBox.insertBefore(selected[0], discsA[0]);
                 selected.shift();
 
                 moves += 1;
-                tracker = moves;
+                tracker.textContent = moves;
             }
         }
     }
@@ -61,13 +61,13 @@ secondBox.addEventListener('click', function(e) {
                 selected.shift();
 
                 moves += 1;
-                tracker = moves;
+                tracker.textContent = moves;
             } else if (discsB[0].getAttribute('score') < selected[0].getAttribute('score')) {
                 secondBox.insertBefore(selected[0], discsB[0]);
                 selected.shift();
 
                 moves += 1;
-                tracker = moves;
+                tracker.textContent = moves;
             }
         }
     }
@@ -88,13 +88,13 @@ thirdBox.addEventListener('click', function(e) {
                 selected.shift();
 
                 moves += 1;
-                tracker = moves;
+                tracker.textContent = moves;
             } else if (discsC[0].getAttribute('score') < selected[0].getAttribute('score')) {
                 thirdBox.insertBefore(selected[0], discsC[0]);
                 selected.shift();
 
                 moves += 1;
-                tracker = moves;
+                tracker.textContent = moves;
             }
         }
     }
