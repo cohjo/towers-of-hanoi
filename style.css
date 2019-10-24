@@ -131,3 +131,16 @@ body {
     width: 27%;
     margin-right: 21%;
 }
+
+#instr {
+    height: 100%;
+    width: 15%;
+    margin-right: 17%;
+    background-image: url('imgs/instructions.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#instr:hover {
+    background-image: url('imgs/instructionsAn.jpg');
+}

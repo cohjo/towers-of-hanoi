@@ -123,6 +123,8 @@ function check() {
     if(discsC.length === 4) {
         swal({title: "Good job!",
             text: "You won in "+ moves +" moves!",
-            icon: "success"});
+            icon: "success"}).then(function() {
+                location.reload();
+            });
     }
 }
