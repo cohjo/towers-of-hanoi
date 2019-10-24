@@ -117,3 +117,17 @@ body {
     width: 55%;
     height: 15%;
 }
+
+#disc1:hover, #disc2:hover, #disc3:hover, #disc4:hover {
+    filter: saturate(70%);
+    opacity: 0.95;
+}
+
+#holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 27%;
+    margin-right: 21%;
+}
