@@ -25,6 +25,7 @@ const title = document.getElementById('titleImg');
 const hold = document.getElementById('holder');
 const inst = document.getElementById('instr');
 const incr = document.getElementById('inc');
+const finalB = document.querySelector('.box3');
 
 var selected = [];
 var moves = 0;
@@ -128,8 +129,7 @@ thirdBox.addEventListener('click', function(e) {
     check(winning);
 });
 
-incr.addEventListener('click', function(e) {
-
+incr.addEventListener('click', function() {
     if(winning === 4) {
         firstBox.insertBefore(fiveD, discsA[0]);
         fiveD.style.display = 'block';
@@ -155,6 +155,7 @@ inst.addEventListener('click', function(e) {
 
 function check(winning) {
     if(discsC.length === winning) {
+        finalB.style.backgroundImage = 'url("imgs/towerWin.jpg")'
         swal({title: "Good job!",
             text: "You won in "+ moves +" moves!",
             icon: "success"}).then(function() {
