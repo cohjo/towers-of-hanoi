@@ -124,7 +124,13 @@ body {
     display: none;
 }
 
-#disc1:hover, #disc2:hover, #disc3:hover, #disc4:hover, #disc5:hover {
+#disc6 {
+    width: 25%;
+    height: 15%;
+    display: none;
+}
+
+#disc1:hover, #disc2:hover, #disc3:hover, #disc4:hover, #disc5:hover, #disc6:hover {
     filter: saturate(70%);
     opacity: 0.95;
 }

@@ -11,12 +11,15 @@ const secondD = document.querySelector('#disc2');
 const thirdD = document.querySelector('#disc3');
 const fourD = document.querySelector('#disc4');
 const fiveD = document.querySelector('#disc5');
+const sixD = document.querySelector('#disc6');
 
 const score1 = document.getElementById('disc1').getAttribute('score');
 const score2 = document.getElementById('disc2').getAttribute('score');
 const score3 = document.getElementById('disc3').getAttribute('score');
 const score4 = document.getElementById('disc4').getAttribute('score');
 const score5 = document.getElementById('disc5').getAttribute('score');
+const score6 = document.getElementById('disc6').getAttribute('score');
+
 
 const title = document.getElementById('titleImg');
 const hold = document.getElementById('holder');
@@ -131,8 +134,11 @@ incr.addEventListener('click', function(e) {
         firstBox.insertBefore(fiveD, discsA[0]);
         fiveD.style.display = 'block';
         winning++;
+    } else if (winning === 5) {
+        firstBox.insertBefore(sixD, discsA[0]);
+        sixD.style.display = 'block';
+        winning++;
     }
-
 })
 
 title.addEventListener('click', function() {
