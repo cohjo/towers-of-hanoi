@@ -125,7 +125,7 @@ thirdBox.addEventListener('click', function(e) {
         }
     }
 
-    check();
+    check(winning);
 });
 
 incr.addEventListener('click', function(e) {
@@ -138,7 +138,7 @@ incr.addEventListener('click', function(e) {
         firstBox.insertBefore(sixD, discsA[0]);
         sixD.style.display = 'block';
         winning++;
-    }
+    } 
 })
 
 title.addEventListener('click', function() {
