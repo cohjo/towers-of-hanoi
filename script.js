@@ -72,7 +72,6 @@ secondBox.addEventListener('click', function(e) {
         if (selected.length == 0) {
             selected.push(discsB[0]);
             hold.appendChild(discsB[0]);
-            // secondBox.removeChild(discsB[0]);
             var curr = hold.children[0];
             curr.style.height = '90%';
         } else {
@@ -104,7 +103,6 @@ thirdBox.addEventListener('click', function(e) {
         if (selected.length === 0) {
             selected.push(discsC[0]);
             hold.appendChild(discsC[0]);
-            // thirdBox.removeChild(discsC[0]);
             var curr = hold.children[0];
             curr.style.height = '90%';
         } else {
