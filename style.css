@@ -94,7 +94,7 @@ body {
     align-items: center;
     justify-content: flex-end;
     width: 80%;
-    height: 83%;
+    height: 82%;
     position: relative;
 }
 
@@ -118,7 +118,13 @@ body {
     height: 15%;
 }
 
-#disc1:hover, #disc2:hover, #disc3:hover, #disc4:hover {
+#disc5 {
+    width: 40%;
+    height: 15%;
+    display: none;
+}
+
+#disc1:hover, #disc2:hover, #disc3:hover, #disc4:hover, #disc5:hover {
     filter: saturate(70%);
     opacity: 0.95;
 }
@@ -129,7 +135,7 @@ body {
     justify-content: center;
     height: 100%;
     width: 26.5%;
-    margin-right: 22%;
+    margin-right: 24%;
     border: solid darkgrey 1px;
     border-radius: 10px;
 }
@@ -142,7 +148,7 @@ body {
 #instr {
     height: 100%;
     width: 15%;
-    margin-right: 17%;
+    margin-right: 0;
     background-image: url('imgs/instructions.jpg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -150,4 +156,17 @@ body {
 
 #instr:hover {
     background-image: url('imgs/instructionsAn.jpg');
+}
+
+#inc {
+    height: 100%;
+    width: 15%;
+    margin-right: 7%;
+    background-image: url('imgs/instructions.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#inc:hover {
+    background-image: url('imgs/increase.jpg');
 }

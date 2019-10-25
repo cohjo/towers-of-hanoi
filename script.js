@@ -10,17 +10,22 @@ const firstD = document.querySelector('#disc1');
 const secondD = document.querySelector('#disc2');
 const thirdD = document.querySelector('#disc3');
 const fourD = document.querySelector('#disc4');
+const fiveD = document.querySelector('#disc5');
 
 const score1 = document.getElementById('disc1').getAttribute('score');
 const score2 = document.getElementById('disc2').getAttribute('score');
 const score3 = document.getElementById('disc3').getAttribute('score');
 const score4 = document.getElementById('disc4').getAttribute('score');
+const score5 = document.getElementById('disc5').getAttribute('score');
+
 const title = document.getElementById('titleImg');
 const hold = document.getElementById('holder');
 const inst = document.getElementById('instr');
+const incr = document.getElementById('inc');
 
 var selected = [];
 var moves = 0;
+var winning = 4;
 
 var tracker = document.getElementById('cScore');
 
@@ -120,6 +125,16 @@ thirdBox.addEventListener('click', function(e) {
     check();
 });
 
+incr.addEventListener('click', function(e) {
+
+    if(winning === 4) {
+        firstBox.insertBefore(fiveD, discsA[0]);
+        fiveD.style.display = 'block';
+        winning++;
+    }
+
+})
+
 title.addEventListener('click', function() {
     location.reload();
 
@@ -132,8 +147,8 @@ inst.addEventListener('click', function(e) {
         text: 'Move all discs to the third tower exactly how they are displayed. You can only move discs one by one, and you cannot stack larger discs on smaller ones. Good Luck! (Click title to restart)'})
 })
 
-function check() {
-    if(discsC.length === 4) {
+function check(winning) {
+    if(discsC.length === winning) {
         swal({title: "Good job!",
             text: "You won in "+ moves +" moves!",
             icon: "success"}).then(function() {
