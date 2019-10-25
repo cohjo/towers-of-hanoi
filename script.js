@@ -15,7 +15,7 @@ const score1 = document.getElementById('disc1').getAttribute('score');
 const score2 = document.getElementById('disc2').getAttribute('score');
 const score3 = document.getElementById('disc3').getAttribute('score');
 const score4 = document.getElementById('disc4').getAttribute('score');
-
+const title = document.getElementById('titleImg');
 const hold = document.getElementById('holder');
 
 var selected = [];
@@ -118,6 +118,11 @@ thirdBox.addEventListener('click', function(e) {
 
     check();
 });
+
+title.addEventListener('click', function() {
+    location.reload();
+
+})
 
 function check() {
     if(discsC.length === 4) {
