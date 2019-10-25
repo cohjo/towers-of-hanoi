@@ -128,8 +128,15 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 27%;
-    margin-right: 21%;
+    width: 26.5%;
+    margin-right: 22%;
+    border: solid darkgrey 1px;
+    border-radius: 10px;
+}
+
+#holder:hover {
+    border: solid darkgrey 2px;
+    box-shadow: grey;
 }
 
 #instr {

@@ -1,1 +1,3 @@
-# towers-of-hanoi
+# Tower of Hanoi (Hamburger)
+### By Conor Johnston
+

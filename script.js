@@ -129,7 +129,7 @@ inst.addEventListener('click', function(e) {
     e.preventDefault();
 
     swal({title: 'Instructions: ',
-        text: 'Move all discs to the third tower exactly how they are displayed. You can only move discs one by one, and you cannot stack larger discs on smaller ones. Good Luck!'})
+        text: 'Move all discs to the third tower exactly how they are displayed. You can only move discs one by one, and you cannot stack larger discs on smaller ones. Good Luck! (Click title to restart)'})
 })
 
 function check() {
